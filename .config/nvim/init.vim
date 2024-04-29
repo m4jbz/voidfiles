@@ -10,8 +10,6 @@ set encoding=UTF-8
 
 let mapleader = "\<Space>"
 au VimLeave * set guicursor=a:ver100
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
 
 "" Calling config files 
 source ~/.config/nvim/plugins/plugins.vim
@@ -21,12 +19,10 @@ source ~/.config/nvim/plugins/vimwiki.vim
 source ~/.config/nvim/plugins/vimtex.vim
 source ~/.config/nvim/mappings/mappings.vim
 "" -----------------------------------------
-
 "" Colorscheme 
 set termguicolors
 set background=dark
-colorscheme tsoding 
-highlight Normal ctermbg ='181813' guibg='181818'
+colorscheme tsoding
 
 "" Java highlighting
 let java_highlight_functions = 1

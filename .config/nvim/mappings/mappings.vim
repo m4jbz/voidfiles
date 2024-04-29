@@ -9,6 +9,8 @@ nnoremap <C-q> :q<CR>
 nnoremap ty :VimtexCompile <CR>
 nnoremap tv :!bash voice <CR>
 nnoremap zz :update<cr>
+nnoremap <C-b> :!touch build.sh && chmod +x build.sh && echo "\#\!/bin/sh\n\nset -xe\n\n" > build.sh <cr>
+nnoremap <M-b> :!./build.sh <cr>
 "" inoremap " ""<left>
 "" inoremap ' ''<left>
 inoremap ( ()<left>
@@ -54,8 +56,8 @@ autocmd FileType cpp inoremap ,for for (int i = 0; i < 1; ++i) {<Enter><Enter>}
 
 "" Java keymaps
 autocmd FileType java inoremap ,sout System.out.println();
-autocmd FileType java inoremap ,for for(int i = 0; i < 1; ++i) {<Enter><Enter>}
-autocmd FileType java inoremap ,java import java.util.Scanner;<Enter>public class <C-R>=expand('%:t:r')<CR><Enter>{<Enter>public static void main(String[] args)<Enter>{<Enter>Scanner sc = new Scanner(System.in);<Enter><Enter>sc.close();<Enter>}<Enter>}
+autocmd FileType java inoremap ,for for (int i = 0; i < 1; ++i) {<Enter><Enter>}
+autocmd FileType java inoremap ,java import java.util.Scanner;<Enter>public class <C-R>=expand('%:t:r')<CR> {<Enter>public static void main(String[] args) {<Enter>Scanner sc = new Scanner(System.in);<Enter><Enter>sc.close();<Enter>}<Enter>}
 ""-------------------------------------------
 
 "" LaTeX keymaps

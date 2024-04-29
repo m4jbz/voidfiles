@@ -8,5 +8,5 @@ call plug#begin()
 	Plug 'itchyny/lightline.vim'
 	Plug 'tpope/vim-fugitive'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-	Plug 'rafalbromirski/vim-aurora'
+	Plug 'Mofiqul/vscode.nvim'
 call plug#end()

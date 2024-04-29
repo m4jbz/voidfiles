@@ -2,12 +2,11 @@
 " Info:
 " ----------------------------------------------------------------------------
 
-" File:       aurora.vim
-" Version:    2.0.0
-" Maintainer: Rafal Bromirski
-" URL:        https://github.com/rafalbromirski/vim-aurora
-" Modified:   Sun 3 May 2020 21:03:28 CEST
-" License:    MIT
+" File:       tsoding.vim
+" Version:    1.0.0
+" Maintainer: Marco Aurelio Juarez Baltazar 
+" URL:        https://github.com/m4jbz
+" Modified:   Sun 9 Apr 2024 21:03:28 CEST
 
 " ----------------------------------------------------------------------------
 " Initial Setup:
@@ -26,8 +25,6 @@ set background=dark
 " ----------------------------------------------------------------------------
 " Colors:
 " ----------------------------------------------------------------------------
-" resources:
-" - https://maketintsandshades.com/
 
 let s:black        = '#000000'
 let s:white        = '#ffffff'
@@ -41,7 +38,7 @@ let s:red          = '#bbbbbb'
 let s:orange       = '#838485'
 let s:yellow       = '#cfcfdd'
 let s:green        = '#79bf46'
-let s:aqua         = '#ffdd27'
+let s:aqua         = '#838485'
 let s:blue         = '#ffdd27'
 let s:purple       = '#9d8cff'
 let s:pink         = '#ff70ff'
@@ -57,7 +54,7 @@ let s:lightorange  = "#ffd4a8"
 let s:lightyellow  = "#ffeac1"
 let s:lightgreen   = "#d7f7b9"
 let s:lightaqua    = "#a3fff3"
-let s:lightblue    = "#ade3ff"
+let s:lightblue    = "#add8e6"
 let s:lightpurple  = "#d8d1ff"
 
 let s:none = "NONE"
@@ -105,15 +102,15 @@ endfunction
 " Vim Highlighting: (see :help highlight-groups)"
 " ----------------------------------------------------------------------------
 
-call s:HL('Normal', s:accent_6, s:accent_2, s:none)
+call s:HL('Normal', s:accent_6, '181818', s:none)
 
-call s:HL('ColorColumn', s:none, s:accent_3, s:none)
+call s:HL('ColorColumn', s:blue, s:accent_3, s:none)
 " call s:HL('Conceal', ...)
 
-call s:HL('Cursor', s:accent_2, s:red, s:none)
+call s:HL('Cursor', s:accent_2, s:blue, s:none)
 " call s:HL('CursorIM', s:accent_2, s:accent_6, s:none)
 call s:HL('CursorColumn', s:none, s:accent_3, s:none)
-call s:HL('CursorLine', s:none, s:accent_3, s:none)
+call s:HL('CursorLine', s:blue, s:accent_3, s:none)
 
 call s:HL('Directory', s:purple, s:none, s:none)
 
@@ -129,21 +126,23 @@ call s:HL('FoldColumn', s:accent_5, s:none, s:none)
 call s:HL('SignColumn', s:none, s:none, s:none)
 " call s:HL('Incsearch', s:none, s:none, s:none)
 
-call s:HL('LineNr', s:accent_4, s:none, s:none)
+call s:HL('LineNr', s:blue, s:none, s:none)
+call s:HL('LineNrAbove', s:accent_4, s:none, s:none)
+call s:HL('LineNrBelow', s:accent_4, s:none, s:none)
 call s:HL('CursorLineNr', s:yellow, s:none, s:none)
-call s:HL('MatchParen', s:red, s:accent_2, s:none)
+call s:HL('MatchParen', s:accent_3, s:accent_2, s:none)
 " call s:HL('MatchParen', s:accent_2, s:purple, s:none)
 call s:HL('ModeMsg', s:green, s:none, s:none)
 call s:HL('MoreMsg', s:green, s:none, s:none)
 call s:HL('NonText', s:accent_4, s:none, s:none)
 
 call s:HL('Pmenu', s:accent_6, s:accent_4, s:none)
-call s:HL('PmenuSel', s:accent_2, s:purple, s:none)
+call s:HL('PmenuSel', s:accent_2, s:black, s:none)
 " call s:HL('PmenuSbar', ...)
 " call s:HL('PmenuSbar', ...)
 
 call s:HL('Question', s:green, s:none, s:none)
-call s:HL('Search', s:accent_2, s:yellow, s:none)
+call s:HL('Search', s:accent_3, s:white, s:none)
 call s:HL('SpecialKey', s:accent_4, s:none, s:none)
 call s:HL('SpellCap', s:blue, s:darkblue, s:underline)
 call s:HL('SpellLocal', s:aqua, s:darkaqua, s:underline)
@@ -161,7 +160,7 @@ call s:HL('TabLineSel', s:accent_6, s:accent_2, s:none)
 
 call s:HL('Title', s:yellow, s:none, s:none)
 
-call s:HL('Visual', s:none, s:accent_4, s:none)
+call s:HL('Visual', s:accent_6, s:accent_1, s:none)
 " call s:HL('VisualNos', ...)
 
 call s:HL('WarningMsg', s:red, s:none, s:none)
@@ -303,32 +302,3 @@ call s:HL('rubyInstanceVariable', s:purple, s:none, s:none)
 call s:HL('rubyClass', s:yellow, s:none, s:none)
 call s:HL('rubyMacro', s:blue, s:none, s:none)
 call s:HL('rubySharpBang', s:accent_5, s:none, s:none)
-
-" ----------------------------------------------------------------------------
-" License:
-" ----------------------------------------------------------------------------
-
-" Copyright (c) 2020 Rafal Bromirski
-"
-" Permission is hereby granted, free of charge, to any per‐
-" son obtaining a copy of this software and associated doc‐
-" umentation files (the “Software”), to deal in the Soft‐
-" ware without restriction, including without limitation
-" the rights to use, copy, modify, merge, publish, distrib‐
-" ute, sublicense, and/or sell copies of the Software, and
-" to permit persons to whom the Software is furnished to do
-" so, subject to the following conditions:
-"
-" The above copyright notice and this permission notice
-" shall be included in all copies or substantial portions
-" of the Software.
-"
-" THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY
-" KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-" THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICU‐
-" LAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-" AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-" DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CON‐
-" TRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CON‐
-" NECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-" THE SOFTWARE.

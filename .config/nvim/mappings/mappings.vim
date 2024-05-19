@@ -57,7 +57,7 @@ autocmd FileType cpp inoremap ,for for (int i = 0; i < 1; ++i) {<Enter><Enter>}
 "" Java keymaps
 autocmd FileType java inoremap ,sout System.out.println();
 autocmd FileType java inoremap ,for for (int i = 0; i < 1; ++i) {<Enter><Enter>}
-autocmd FileType java inoremap ,java import java.util.Scanner;<Enter>public class <C-R>=expand('%:t:r')<CR> {<Enter>public static void main(String[] args) {<Enter>Scanner sc = new Scanner(System.in);<Enter><Enter>sc.close();<Enter>}<Enter>}
+autocmd FileType java inoremap ,java import java.util.Scanner;<Enter><Enter>public class <C-R>=expand('%:t:r')<CR> {<Enter>public static void main(String[] args) {<Enter>Scanner sc = new Scanner(System.in);<Enter><Enter>sc.close();<Enter>}<Enter>}
 ""-------------------------------------------
 
 "" LaTeX keymaps

@@ -1,12 +1,14 @@
 set number
 set relativenumber
 set autoindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smarttab
-set softtabstop=4
+set softtabstop=2
 set mouse=a
 set encoding=UTF-8
+set list
+set listchars=tab:-\ ,eol:•,trail:⋅
 
 let mapleader = "\<Space>"
 au VimLeave * set guicursor=a:ver100
@@ -22,7 +24,7 @@ source ~/.config/nvim/mappings/mappings.vim
 "" Colorscheme 
 set termguicolors
 set background=dark
-colorscheme tsoding
+colorscheme vscode
 
 "" Java highlighting
 let java_highlight_functions = 1
@@ -40,3 +42,4 @@ highlight link cType Type
 highlight link cPreProc PreProc
 "" -------------------------------
 set shell=/bin/zsh
+set clipboard = "unnamedplus" 

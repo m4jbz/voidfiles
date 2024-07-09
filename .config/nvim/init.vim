@@ -24,7 +24,7 @@ source ~/.config/nvim/mappings/mappings.vim
 "" Colorscheme 
 set termguicolors
 set background=dark
-colorscheme vscode
+colorscheme tsoding
 
 "" Java highlighting
 let java_highlight_functions = 1

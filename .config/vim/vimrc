@@ -1,0 +1,46 @@
+set number
+set relativenumber
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set softtabstop=4
+set mouse=a
+set encoding=UTF-8
+"" set laststatus=2
+
+set background=dark
+set termguicolors
+colorscheme solarized
+
+filetype plugin indent on
+syntax on
+
+"" java highlighting
+let java_highlight_functions = 1
+let java_highlight_all = 1
+highlight link javaScopeDecl Statement
+highlight link javaType Type
+highlight link javaDocTags PreProc
+"" -------------------------------
+
+"" C highlighting
+let c_highlight_functions = 1
+let c_highlight_all = 1
+highlight link cStatement Statement
+highlight link cType Type
+highlight link cPreProc PreProc
+"" -------------------------------
+set shell=/bin/zsh
+set clipboard=unnamedplus 
+
+source ~/.config/vim/plugins/plugins.vim
+"" source ~/.config/vim/plugins/lightline.vim
+source ~/.config/vim/plugins/coc.vim
+source ~/.config/vim/plugins/vimwiki.vim
+source ~/.config/vim/plugins/vimtex.vim
+source ~/.config/vim/mappings/mappings.vim
+
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+set backspace=indent,eol,start " backspace over everything in insert mode
